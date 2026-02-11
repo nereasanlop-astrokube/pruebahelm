@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: exampledeploymentchart
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-chart
+  template:
+    metadata:
+      labels:
+        app: app-chart
+    spec:
+      containers:
+      - name: midocker
+        image: mi_docker:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 80
