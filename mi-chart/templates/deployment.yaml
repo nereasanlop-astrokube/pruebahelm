@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: exampledeploymentchart
+  name: minuevaappp1
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: app-chart
+      app: minuevaapp1
   template:
     metadata:
       labels:
-        app: app-chart
+        app: minuevaapp1
     spec:
       containers:
       - name: midocker
